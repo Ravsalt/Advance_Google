@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+
+{% block title %}Manual Search{% endblock %}
+
+{% block content %}
+<h1>Manual Google Image Search</h1>
+<p>Please go to <a href="https://images.google.com/" target="_blank" rel="noopener noreferrer">Google Images</a> and upload the image manually for search.</p>
+<a href="{{ url_for('index') }}" class="btn">Back to Search</a>
+{% endblock %}

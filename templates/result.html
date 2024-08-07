@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+
+{% block title %}Search Result{% endblock %}
+
+{% block content %}
+<h1>Generated Google Search URL</h1>
+<p><a href="{{ google_url }}" target="_blank" rel="noopener noreferrer">{{ google_url }}</a></p>
+<a href="{{ url_for('index') }}" class="btn">Back to Search</a>
+{% endblock %}

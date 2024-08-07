@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h1>Google Searcher</h1>
+<form method="post" id="search-form">
+    <div class="form-group">
+        <label for="type">Search Type:</label>
+        <select name="type" id="type" required>
+            <option value="">Select a search type</option>
+            <option value="site">Site Search</option>
+            <option value="filetype">File Type Search</option>
+            <option value="exclude">Exclude Terms</option>
+            <option value="phrase">Exact Phrase Search</option>
+            <option value="title">In Title Search</option>
+            <option value="date">Date Range Search</option>
+            <option value="or">OR Operator Search</option>
+            <option value="currency">Currency Search</option>
+            <option value="source">Specific Source Search</option>
+        </select>
+    </div>
+    <div class="form-group" id="additional-fields">
+        <!-- Additional fields will be added here dynamically -->
+    </div>
+    <button type="submit">Generate Search URL</button>
+</form>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+{% endblock %}
